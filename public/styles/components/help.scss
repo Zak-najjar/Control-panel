@@ -1,0 +1,21 @@
+@use '../utilites/spacing.scss' as spaces;
+@use '../config/colors.scss' as colors;
+@use 'sass:color';
+
+
+.c-help {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(color.adjust(colors.$color-primary, $lightness: -30%), 0.15);
+  background-color: #fff;
+  border-radius: spaces.spacing('small');
+  padding: spaces.spacing();
+  margin: spaces.spacing('wide') auto;
+  width: fit-content;
+}
+
+.c-help__icon {
+  margin-left: spaces.spacing('extra-small');
+  color: colors.$color-primary;
+  font-size: 20px;
+}

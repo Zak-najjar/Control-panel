@@ -1,0 +1,35 @@
+{{#> components-container title="button"}}
+  <div class="c-banner">
+    <h3 class="c-banner__title">
+      بوابة الدفع عبر باي بال متاحة
+    </h3>
+    <p class="c-banner__desc">
+      تم إضافة بوابة الدفع عبر بايونير لكل متاجر عربي، تستطيع ربط حسابك في بايونير لتستقبل الأموال عبرها
+    </p>
+    <a href="#" class="c-banner__action c-btn c-btn--transparent">اكتشف المزيد</a>
+
+    <i class="fa-solid fa-flag c-banner__icon"></i>
+    <i class="fa-solid fa-circle-xmark c-banner__close"></i>
+
+  </div>
+
+
+  <script>
+    (function () {
+      document.querySelectorAll('.c-banner__close').forEach(i => {
+        i.addEventListener('click', () => {
+          const banner = i.parentNode;
+          banner.classList.add('collapse');
+          // setTimeout(() => {
+          //   banner.remove();
+          // }, 500); 
+          banner.addEventListener('transitionend', (e) => {
+            if(e.target === banner ) {
+              banner.remove()
+            }
+          });
+        });
+      });
+    })();
+  </script>
+{{/components-container}}

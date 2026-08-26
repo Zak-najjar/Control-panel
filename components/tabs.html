@@ -1,0 +1,40 @@
+{{#> components-container title="tabs"}}
+  <div class="c-tabs">
+    <div class="c-tabs__controls">
+      <span class="c-tabs__tab active js-tabs-tab" data-tab-index="needProccess">طلبات تتطلب المعالجة</span>
+      <span class="c-tabs__tab js-tabs-tab" data-tab-index="almostDone">منتجات على وشك النفاذ</span>
+      <span class="c-tabs__tab js-tabs-tab" data-tab-index="newClient">زبائن جدد</span>
+    </div>
+    <div class="c-tabs__content">
+      <span class="c-tabs__tabarea js-tabs-tabarea active" data-content-index="needProccess">tab1</span>
+      <span class="c-tabs__tabarea js-tabs-tabarea active" data-content-index="needProccess">tab1</span>
+      <span class="c-tabs__tabarea js-tabs-tabarea active" data-content-index="needProccess">tab1</span>
+      <span class="c-tabs__tabarea js-tabs-tabarea active" data-content-index="needProccess">tab1</span>
+      <span class="c-tabs__tabarea js-tabs-tabarea" data-content-index="almostDone">tab2</span>
+      <span class="c-tabs__tabarea js-tabs-tabarea" data-content-index="newClient">tab3</span>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+    const tabs = document.querySelectorAll('.js-tabs-tab');
+    const datas = document.querySelectorAll('.js-tabs-tabarea');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(i => i.classList.remove('active'));
+        datas.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const tabindex = tab.getAttribute('data-tab-index');
+        const tabareas = document.querySelectorAll(`.js-tabs-tabarea[data-content-index="${tabindex}"]`).forEach(tabarea =>
+        {
+          tabarea.classList.add('active');
+        });
+      });
+    });
+    
+    })();
+
+  </script>
+{{/components-container}}

@@ -1,0 +1,107 @@
+@use '../utilites/mixin-cards.scss' as mixin-cards;
+@use '../utilites/spacing.scss' as spaces;
+@use '../config/colors.scss' as colors;
+
+.c-upload {
+  @include mixin-cards.e-card;
+  min-width: 400px;
+  min-height: 400px;
+  padding: spaces.spacing('normal') spaces.spacing('normal') spaces.spacing('wide');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.c-upload__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-upload__label {
+  color: colors.$color-link;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.c-upload__label--remove {
+  color: colors.$color-red;
+  display: none;
+}
+
+.c-upload__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.c-upload__image {
+  background: url(/images/upload.svg) no-repeat center;
+  align-items: center;
+  justify-content: center;
+  background-size: 150px;
+  width: 100%;
+  min-height: 200px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline;
+}
+
+.c-upload__field {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+
+.c-upload__subtitle {
+  margin: 0 auto;
+  
+}
+
+.c-upload--small {
+  min-width: initial;
+  min-height: initial;
+  box-shadow: none;
+  background: none;
+  padding: 0;
+
+  .c-upload__body {
+    @include mixin-cards.e-card;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+  }
+  .c-upload__label {
+    margin-left: auto;
+  }
+}
+
+
+
+.c-upload.has-image {
+  width: 250px;
+  
+  .c-upload__label--remove {
+    display: block;
+  }
+}
+
+.c-upload--small.has-image {
+  .c-upload__body {
+    padding: spaces.spacing('small');
+    height: auto;
+  }
+
+  .c-upload__label--remove {
+    display: block;
+  }
+}
+
+

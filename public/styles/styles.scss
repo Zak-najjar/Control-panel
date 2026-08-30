@@ -10,3 +10,6 @@
 @use './base/typography.scss';
 
 @use './components/components';
+@use './pages/index.scss';
+@use './pages/single-page.scss';
+@use './hacks/add-product.scss';

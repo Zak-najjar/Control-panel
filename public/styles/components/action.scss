@@ -35,7 +35,7 @@ $indecator-size: 10px;
   width: $indecator-size;
   height: $indecator-size;
   background-color: colors.$color-primary;
-  margin-left: calc($indecator-size/2);
+  margin-left: calc($indecator-size);
   border-radius: calc($indecator-size/2);
 }
 

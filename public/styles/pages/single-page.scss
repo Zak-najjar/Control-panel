@@ -1,0 +1,22 @@
+@use '../utilites/spacing.scss' as spaces;
+
+
+.page-header {
+  display: flex;
+  align-items: baseline;
+  margin: spaces.spacing('wide') 0;
+
+  .c-btn {
+    margin-right: spaces.spacing();
+  }
+  .c-btn:first-of-type {
+    margin-right: spaces.spacing('wide');
+  }
+  
+}
+
+
+
+.c-textfield__input--left::placeholder {
+  text-align: end;
+}

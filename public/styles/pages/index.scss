@@ -1,0 +1,25 @@
+@use '../config/layout.scss' as layouts;
+@use '../utilites/spacing.scss' as spaces;
+
+
+.page-container {
+  padding-right: layouts.$layout-sidebar + spaces.spacing('normal');
+  padding-left: spaces.spacing('normal');
+}
+
+.main-page {
+  background: url(../../images/confitti.svg) no-repeat top left;
+}
+
+.welcome-intro {
+  display: flex;
+  justify-content: space-between;
+  margin-top: spaces.spacing('extra-wide');
+  margin-bottom: spaces.spacing('wide');
+  align-items: center;
+  flex-wrap: wrap;
+  .welcome-tag {
+    font-size: 28px;
+  }
+}
+

@@ -9,7 +9,7 @@
   color: colors.$color-content;
   text-align: center;
   padding: 8px 16px;
-  border-radius: 3px;
+  border-radius: 4px;
   display: inline-block;
   cursor: pointer;
   border: 1px solid color.adjust(colors.$color-white, $lightness: -15%);
@@ -31,7 +31,7 @@
 .c-btn--primary {
   color: colors.$color-white;
   background-color: colors.$color-primary;
-
+  border-color: colors.$color-primary;
   &:focus {
     border-color: color.adjust(colors.$color-primary, $lightness: -10%);
   }
@@ -48,7 +48,7 @@
   color: colors.$color-white;
   background-color: colors.$color-red;
 
-
+  border-color: colors.$color-red;
 
     &:focus {
     border-color: color.adjust(colors.$color-red, $lightness: -10%);

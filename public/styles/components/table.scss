@@ -26,6 +26,11 @@ $product-media-size: 40px;
 .c-table__navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: spaces.spacing();
+}
+.c-table__navigation__caption {
+  font-size: 13px;
 }
 .c-table__actions {
   margin-left: auto;
@@ -52,7 +57,7 @@ $product-media-size: 40px;
     text-align: start;
   }
   td,th {
-    padding: spaces.spacing('extra-small');
+    padding: spaces.spacing('extra-small') 0;
     border-bottom: 1px solid rgba(color.adjust(white, $lightness: -40%), 0.15);
   }
   img {

@@ -1,0 +1,50 @@
+{{#> layout
+title="المستخدمين"
+}}
+<div class="single-page">
+  <div class="page-header">
+    <h1 class="page-title">المستخدمين</h1>
+    <a href="/add-user.html" class="c-btn ">اضافة مستخدم</a>
+  </div>
+  <div class="c-table c-table--select-all">
+    {{#> table-header
+      title="المستخدمين"
+      caption="6 من أصل 24"
+    }}
+      <button class="c-btn c-btn--tight c-btn--remove">حذف</button>
+
+    {{/table-header}}
+    <table class="c-table__data">
+      <thead>
+        <tr>
+          {{#> select-all}}{{/select-all}}
+          <th>تحديد الكل</th>
+          <th>اسم المستخدم</th>
+          <th>البريد الإلكتروني</th>
+          <th>عدد المنتجات</th>
+          <th>المبيعات</th>
+          <th>الرصيد</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" id="item-1"></td>
+          <td><img src="/images/user-1.jpg"></td>
+          <td>محمد احمد</td>
+          <td>me@gmail.com</td>
+          <td>12</td>
+          <td>950$</td>
+          <td>2000$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer class="c-table__footer">
+      {{#> table-navigation
+        caption="6 من أصل 24"
+      }}
+      {{/table-navigation}}
+    </footer>
+  </div>
+
+  {{/layout}}

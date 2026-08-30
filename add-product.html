@@ -1,0 +1,78 @@
+{{#> layout
+title="اضافة منتج"
+pageScript="/src/scripts/upload.js"
+}}
+<div class="single-page">
+  <div class="page-header">
+    <h1 class="page-title">إضافة منتج</h1>
+    <button class="c-btn c-btn--primary" type="submit" name="add-product" form="productForm">اضافة منتج</button>
+    <button class="c-btn" type="submit" name="draft" form="productForm">حفظ كمسودة</button>
+  </div>
+  <form action="" class="c-form" name="productForm">
+    <div class="c-upload js-upload">
+      <header class="c-upload__header">
+        <h4 class="c-upload__title">
+          صورة المنتج
+        </h4>
+        <label for="upload-image" class="c-upload__label ">ارفع الصورة</label>
+        <span class="c-upload__label c-upload__label--remove js-upload-remove">احذف الصورة</span>
+      </header>
+
+      <div class="c-upload__body">
+        <div class="c-upload__image">
+          <img class="js-image-placeholder">
+        </div>
+        <input type="file" name="upload-image" id="upload-image" class="c-upload__field js-upload-value"
+          accept="image/*">
+        <span class="c-upload__subtitle">
+          اسحب الصورة هنا لرفعها
+        </span>
+      </div>
+    </div>
+    <div class="c-form__controls">
+      <div class="c-form__row">
+        <div class="c-textfield">
+          <label for="productName" class="c-textfield__label">اسم المنتج</label>
+          <input type="text" id="productName" class="c-textfield__input" placeholder="مثلا : قميص ابيض">
+        </div>
+      </div>
+      <div class="c-form__row">
+        <div class="c-textfield">
+          <label for="productPrice" class="c-textfield__label">سعر المنتج</label>
+          <input type="text" id="productPrice" class="c-textfield__input c-textfield__input--left" placeholder="$">
+        </div>
+        <div class="c-textfield">
+          <label for="productPrice2" class="c-textfield__label">السعر الثانوي</label>
+          <input type="text" id="productPrice2" class="c-textfield__input c-textfield__input--left" placeholder="ريال">
+        </div>
+      </div>
+      <div class="c-form__row">
+        <div class="c-textfield">
+          <label for="productDesc" class="c-textfield__label">وصف المنتج</label>
+          <textarea id="textarea" class="c-textfield__textarea" placeholder="ادخل الوصف"></textarea>
+        </div>
+      </div>
+      <div class="c-form__row">
+        <div class="c-textfield">
+          <label for="productHeight" class="c-textfield__label">الابعاد</label>
+          <input type="number" id="productPrice2" class="c-textfield__input">
+          <span class="c-textfield__hint">بالسنتيم</span>
+        </div>
+        <div class="c-textfield">
+          <label for="productWidth" class="c-textfield__label"><br></label>
+          <input type="number" id="productPrice2" class="c-textfield__input">
+        </div>
+        <div class="c-textfield">
+          <label for="productDepth" class="c-textfield__label">العمق</label>
+          <input type="number" id="productDepth" class="c-textfield__input" >
+        </div>
+        <div class="c-textfield">
+          <label for="productWeight" class="c-textfield__label">الوزن</label>
+          <input type="number" id="productWeight" class="c-textfield__input">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+{{/layout}}

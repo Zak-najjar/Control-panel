@@ -15,8 +15,10 @@ $sidebar-logo-height: $sidebar-control-width;
   right: 0;
   top: 0;
   display: flex;
-  background-color: rgba(colors.$color-blue-dark, 0.1);
+  background-color: colors.$color-background;
   padding: spaces.spacing('wide') spaces.spacing('small');
+  transition: width 0.3s ease;
+  z-index: 20;
 }
 
 .c-sidebar__control {
@@ -62,6 +64,11 @@ $sidebar-logo-height: $sidebar-control-width;
 
 .c-sidebar__menu {
   margin-right: spaces.spacing('small');
+  transform: scaleX(1);
+  transform-origin: right center;
+  transition: transform 0.5s ease;
+  opacity: 1;
+
 }
 
 .c-sidebar__title {
@@ -86,4 +93,33 @@ $sidebar-logo-height: $sidebar-control-width;
   i {
     margin-left: spaces.spacing('extra-small');
   }
+}
+
+
+.c-sidebar.collapsed {
+  width: $sidebar-control-width;
+  transition: width 0.3s ease;
+  box-sizing: content-box;
+
+  .c-sidebar__menu {
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.5s ease;
+    opacity: 0;
+  }
+
+  .c-sidebar__icon--bottom {
+    margin-bottom: spaces.spacing('extra-wide');
+  }
+
+}
+
+.c-sidebar__backdrop {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(colors.$color-blue-dark, 0.1);
+  top: 0;
+  right: 0;
+  z-index: -1;
 }

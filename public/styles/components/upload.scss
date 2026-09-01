@@ -2,10 +2,12 @@
 @use '../utilites/spacing.scss' as spaces;
 @use '../config/colors.scss' as colors;
 
+$upload-size: 400px;
+
 .c-upload {
   @include mixin-cards.e-card;
-  min-width: 400px;
-  min-height: 400px;
+  min-width: $upload-size;
+  min-height: $upload-size;
   padding: spaces.spacing('normal') spaces.spacing('normal') spaces.spacing('wide');
   display: flex;
   flex-direction: column;
@@ -109,3 +111,10 @@
 
 
 
+@media (max-width: $upload-size) {
+  .c-upload {
+    width: 100%;
+    min-width: initial;
+    min-height: initial;
+  }
+}

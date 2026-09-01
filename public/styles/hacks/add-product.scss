@@ -1,6 +1,17 @@
 @use '../utilites/spacing.scss' as spaces;
+@use '../config/layout.scss' as layouts;
 
 .c-upload + .c-form__controls {
   width: 500px;
   margin-right: spaces.spacing('wide');
+}
+
+
+@media (max-width: layouts.$bp-desktop-normal) {
+  .c-form {
+    flex-wrap: wrap;
+  }
+  .c-upload + .c-form__controls {
+    margin-right: 0;
+  }
 }

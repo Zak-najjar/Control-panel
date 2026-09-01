@@ -23,3 +23,19 @@
   }
 }
 
+
+@media (max-width: layouts.$bp-sidebar) {
+  .page-container {
+    padding-right: spaces.spacing('extra-wide') + spaces.spacing('small');
+  }
+  .main-page {
+    background: none;
+  }
+  .welcome-intro {
+    margin-top: spaces.spacing('normal');
+    .welcome-tag {
+      font-size: 24px;
+    }
+  }
+
+}

@@ -1,11 +1,15 @@
 @use '../utilites/spacing.scss' as spaces;
+@use '../config/layout.scss' as layout;
+
+$container-horizontal-spacing: spaces.spacing('extra-small');
+
 
 .c-list {
   display: flex;
   align-items: center;
   width: 100%;
   background: #fff;
-  padding: spaces.spacing('extra-small') spaces.spacing('small');
+  padding: $container-horizontal-spacing;
   box-shadow: 0 0 0 1px rgba(black, 0.05);
 }
 
@@ -34,4 +38,25 @@
 
 .c-list--form-row {
   display: table-row;
+}
+
+@media (max-width: layout.$bp-tablet-small) {
+  .c-list {
+    flex-wrap: wrap;
+    
+  }
+  .c-list__action {
+    opacity: 1;
+    text-align: right;
+    flex-grow: 1;
+  }
+
+  .c-list__data:not(:first-of-type), .c-list__action {
+    width: 100%;
+    padding: $container-horizontal-spacing;
+    border-top: 1px solid #f8f8f8;
+    margin-left: - $container-horizontal-spacing;
+    margin-right: - $container-horizontal-spacing;
+    
+  }
 }

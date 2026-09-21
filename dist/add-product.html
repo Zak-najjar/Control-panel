@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اضافة منتج</title>
+  <script type="module" crossorigin src="/ControlPanel-production/assets/sidebar-BAm6KRps.js"></script>
+  <script type="module" crossorigin src="/ControlPanel-production/assets/upload-DuZxG-Ei.js"></script>
+  <link rel="stylesheet" crossorigin href="/ControlPanel-production/assets/sidebar-Ba3Gkv-0.css">
+</head>
+
+<body>
+  <div class="page-container">
+      <div class="c-sidebar">
+        <div class="c-sidebar__control">
+          <a href="./index.html" class="c-sidebar__icon c-sidebar__icon--large c-sidebar__logo">
+            <svg viewbox="0 0 35 35">
+              <circle cx="17.5" cy="17.5" r="12" fill="transparent" stroke-width="10"></circle>
+            </svg>
+          </a>
+          <a href="./add-product.html" class="c-sidebar__icon"><i class="fa-solid fa-plus"></i></a>
+          <a href="#search" class="c-sidebar__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#logout" class="c-sidebar__icon"><i class="fa-solid fa-power-off"></i></a>
+          <a href="#profile" class="c-sidebar__icon c-sidebar__icon--bottom c-sidebar__icon--large c-sidebar__icon--image ">
+            <img src="/ControlPanel-production/images/avatar.jpg" alt="avatar">
+          </a>
+        </div>
+        <div class="c-sidebar__menu">
+          <h2 class="c-sidebar__title"><a href="../index.html">عربي</a></h2>
+          <nav class="c-sidebar__navigation">
+            <a href="./index.html" class="c-sidebar__link">نظرة عامة <i class="fa-solid fa-bars"></i></a>
+            <a href="./products.html" class="c-sidebar__link">المنتجات <i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./users.html" class="c-sidebar__link">المستخدمين <i class="fa-solid fa-users"></i></a>
+            <a href="./orders.html" class="c-sidebar__link">الطلبات <i class="fa-solid fa-boxes-stacked"></i></a>
+          </nav>
+        </div>
+        <div class="c-sidebar__backdrop"></div>
+      </div>
+    <div class="single-page">
+      <div class="page-header">
+        <h1 class="page-title">إضافة منتج</h1>
+        <button class="c-btn c-btn--primary" type="submit" name="add-product" form="productForm">اضافة منتج</button>
+        <button class="c-btn" type="submit" name="draft" form="productForm">حفظ كمسودة</button>
+      </div>
+      <form action="" class="c-form" name="productForm">
+        <div class="c-upload js-upload">
+          <header class="c-upload__header">
+            <h4 class="c-upload__title">
+              صورة المنتج
+            </h4>
+            <label for="upload-image" class="c-upload__label ">ارفع الصورة</label>
+            <span class="c-upload__label c-upload__label--remove js-upload-remove">احذف الصورة</span>
+          </header>
+    
+          <div class="c-upload__body">
+            <div class="c-upload__image">
+              <img class="js-image-placeholder">
+            </div>
+            <input type="file" name="upload-image" id="upload-image" class="c-upload__field js-upload-value"
+              accept="image/*">
+            <span class="c-upload__subtitle">
+              اسحب الصورة هنا لرفعها
+            </span>
+          </div>
+        </div>
+        <div class="c-form__controls">
+          <div class="c-form__row">
+            <div class="c-textfield">
+              <label for="productName" class="c-textfield__label">اسم المنتج</label>
+              <input type="text" id="productName" class="c-textfield__input" placeholder="مثلا : قميص ابيض">
+            </div>
+          </div>
+          <div class="c-form__row">
+            <div class="c-textfield">
+              <label for="productPrice" class="c-textfield__label">سعر المنتج</label>
+              <input type="text" id="productPrice" class="c-textfield__input c-textfield__input--left" placeholder="$">
+            </div>
+            <div class="c-textfield">
+              <label for="productPrice2" class="c-textfield__label">السعر الثانوي</label>
+              <input type="text" id="productPrice2" class="c-textfield__input c-textfield__input--left" placeholder="ريال">
+            </div>
+          </div>
+          <div class="c-form__row">
+            <div class="c-textfield">
+              <label for="productDesc" class="c-textfield__label">وصف المنتج</label>
+              <textarea id="textarea" class="c-textfield__textarea" placeholder="ادخل الوصف"></textarea>
+            </div>
+          </div>
+          <div class="c-form__row">
+            <div class="c-textfield">
+              <label for="productHeight" class="c-textfield__label">الابعاد</label>
+              <input type="number" id="productPrice2" class="c-textfield__input">
+              <span class="c-textfield__hint">بالسنتيم</span>
+            </div>
+            <div class="c-textfield">
+              <label for="productWidth" class="c-textfield__label"><br></label>
+              <input type="number" id="productPrice2" class="c-textfield__input">
+            </div>
+            <div class="c-textfield">
+              <label for="productDepth" class="c-textfield__label">العمق</label>
+              <input type="number" id="productDepth" class="c-textfield__input" >
+            </div>
+            <div class="c-textfield">
+              <label for="productWeight" class="c-textfield__label">الوزن</label>
+              <input type="number" id="productWeight" class="c-textfield__input">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <div class="c-help">
+      <i class="c-help__icon fa-solid fa-circle-info"></i>
+      <div>
+        <span class="c-help__text">
+          تعلم المزيد حول
+        </span>
+        <a href="products.html" class="c-help__link">المنتجات</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

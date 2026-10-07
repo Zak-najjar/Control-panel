@@ -1,8 +1,14 @@
+import postcsspresetenv from 'postcss-preset-env';
+import autoprefixer from 'autoprefixer'; 
+
 export default {
-  Plugins : {
-    'postcss-preset-env': {
-      stage : 2
-    },
-    autoprefixer : {}
-  }
+  plugins : [
+    // 'postcss-preset-env': {
+    //   stage : 2
+    // },
+    postcsspresetenv ({
+      stage: 2
+    }),
+    autoprefixer ({})
+  ]
 }
